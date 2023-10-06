@@ -1,0 +1,45 @@
+.css-ccc {
+  display: grid;
+  place-items: center;
+}
+
+.css-ccc_content {
+  position: relative;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.css-ccc_field-group {
+  display: flex;
+  gap: 10px;
+}
+
+.css-ccc_field-group:hover button.css-ccc_copy-to-clipboard-btn,
+.button.css-ccc_copy-to-clipboard-btn:hover {
+  display: block;
+}
+
+label.css-ccc_field-label.label {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+input.css-ccc_field-input.input,
+.css-ccc_field-input-group {
+  width: 400px;
+  display: flex;
+  gap: 10px;
+}
+
+.css-ccc_color-previewer {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: -280px;
+  top: -40px;
+  border-radius: 5px;
+}
