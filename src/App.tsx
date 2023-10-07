@@ -1,11 +1,15 @@
+import { Route } from "wouter";
+
 import { Header } from "./components/header";
-import { CSSColorCodeConvertor } from "./components/css-color-code-convertor";
+import { ColorCodeConvertor } from "./components/color-code-convertor";
 
 const App = () => {
   return (
     <>
       <Header />
-      <CSSColorCodeConvertor />
+      <Route path="/color-code-convertor">
+        <ColorCodeConvertor />
+      </Route>
     </>
   );
 };

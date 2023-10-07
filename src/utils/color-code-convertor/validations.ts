@@ -1,9 +1,6 @@
 import { keys } from "../utils";
 
-import {
-  ColorCode,
-  ColorCodeValue,
-} from "../../types/css-color-code-convertor";
+import { ColorCode, ColorCodeValue } from "../../types/color-code-convertor";
 
 type ValidationFnMap = {
   [key in ColorCode]: (value: ColorCodeValue[key]) => boolean;

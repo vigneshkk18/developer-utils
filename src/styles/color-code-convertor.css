@@ -1,9 +1,9 @@
-.css-ccc {
+.ccc {
   display: grid;
   place-items: center;
 }
 
-.css-ccc_content {
+.ccc_content {
   position: relative;
   max-width: 500px;
   display: flex;
@@ -11,31 +11,31 @@
   gap: 20px;
 }
 
-.css-ccc_field-group {
+.ccc_field-group {
   display: flex;
   gap: 10px;
 }
 
-.css-ccc_field-group:hover button.css-ccc_copy-to-clipboard-btn,
-.button.css-ccc_copy-to-clipboard-btn:hover {
+.ccc_field-group:hover button.ccc_copy-to-clipboard-btn,
+.button.ccc_copy-to-clipboard-btn:hover {
   display: block;
 }
 
-label.css-ccc_field-label.label {
+label.ccc_field-label.label {
   width: 90px;
   display: flex;
   align-items: center;
   margin-bottom: 0;
 }
 
-input.css-ccc_field-input.input,
-.css-ccc_field-input-group {
+input.ccc_field-input.input,
+.ccc_field-input-group {
   width: 400px;
   display: flex;
   gap: 10px;
 }
 
-.css-ccc_color-previewer {
+.ccc_color-previewer {
   width: 250px;
   height: 250px;
   position: absolute;

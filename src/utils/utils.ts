@@ -18,3 +18,7 @@ export const objMapper = <T extends object, R>(
     return acc;
   }, {} as Record<keyof T, R>);
 };
+
+export const pageHeaderMap = {
+  "color-code-convertor": "Color Code Convertor",
+};

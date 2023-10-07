@@ -1,6 +1,6 @@
 import { keys, objMapper } from "../utils";
 
-import { Value, defaultValue } from "../../types/css-color-code-convertor";
+import { Value, defaultValue } from "../../types/color-code-convertor";
 
 // color convertor - start
 

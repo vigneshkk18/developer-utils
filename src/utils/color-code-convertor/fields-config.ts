@@ -1,4 +1,4 @@
-import { Value, ColorCode } from "../../types/css-color-code-convertor";
+import { Value, ColorCode } from "../../types/color-code-convertor";
 
 type InputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
