@@ -1,0 +1,47 @@
+.tl_todo-list {
+  gap: 20px;
+}
+
+.box.tl_todo-preview {
+  width: 250px;
+  height: 250px;
+  padding: 15px;
+}
+
+.tl_todo-list-preview-wrapper {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.tl_todo-list-preview {
+  cursor: pointer;
+  pointer-events: none;
+  box-sizing: border-box;
+  height: 175px;
+  overflow: hidden;
+}
+
+.tl_divider {
+  width: 100%;
+  border: 1px solid #ebebeb;
+}
+
+.tl_todo-info-group {
+  height: 24px;
+  width: 100%;
+  gap: 10px;
+  cursor: default;
+  --title-width: calc(100% - 10px - 20px);
+}
+
+.tl_todo-title {
+  display: block;
+  width: var(--title-width);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tl_todo-item-delete-button {
+  cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.tl_deadine-input {
+  width: 0px;
+  height: 0px;
+}
+
+div.react-date-picker__wrapper {
+  display: none;
+}
+
+.tl_todo-item-deadline-icon {
+  cursor: pointer;
+}
+
+.tl_todo-item-deadline-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}

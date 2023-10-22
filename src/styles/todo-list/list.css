@@ -1,0 +1,13 @@
+.tl_todo-item {
+  padding: 0px 8px;
+  background-color: hsl(60deg, 2%, 97%);
+}
+
+.tl_todo-item:hover {
+  background-color: hsl(60deg, 2%, 95%);
+}
+
+.tl_checkbox {
+  width: 15px;
+  height: 15px;
+}

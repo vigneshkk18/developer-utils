@@ -29,4 +29,25 @@ body,
   height: 100%;
 }
 
+.du_checkbox {
+  width: 20px;
+  height: 18px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 2px solid #b5b5b5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.du_checkbox[aria-checked='true'] {
+  color: #fff;
+  background-color: #48c78e;
+  border: none;
+}
+
+.du_checkbox:hover {
+  border-color: #b5b5b5;
+}
+
 /* application main styles - end */

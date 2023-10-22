@@ -1,6 +1,9 @@
-import { ChangeEventHandler } from "react";
+import { ChangeEventHandler, KeyboardEventHandler } from "react";
 
 export type InputChangeEventHandler = ChangeEventHandler<
+  HTMLInputElement | HTMLTextAreaElement
+>;
+export type InputKeyboardEventHandler = KeyboardEventHandler<
   HTMLInputElement | HTMLTextAreaElement
 >;
 

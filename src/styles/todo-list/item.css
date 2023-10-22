@@ -1,0 +1,7 @@
+.tl_todo-item-completed {
+  text-decoration: line-through;
+}
+
+.tl_todo-item {
+  align-items: center;
+}
