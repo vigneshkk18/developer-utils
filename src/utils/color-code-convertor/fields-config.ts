@@ -17,6 +17,7 @@ type ColorCodeFieldsConfig = Array<
       label: string;
       inputType: "single";
       valueMapper: valueMapper;
+      valueFormatter: (value: Value) => string;
       inputProps: (value: Value) => InputProps;
     }
   | {
@@ -24,6 +25,7 @@ type ColorCodeFieldsConfig = Array<
       label: string;
       inputType: "group";
       valueMapper: valueMapper;
+      valueFormatter: (value: Value) => string;
       inputProps: (value: Value) => InputProps[];
     }
 >;
@@ -38,8 +40,12 @@ export const colorCodeFieldsConfig: ColorCodeFieldsConfig = [
       ({ target }) => {
         return { ...value, HEX: target.value };
       },
+    valueFormatter: (value) => {
+      if (value.HEX[0] === "#") return value.HEX;
+      return `#${value.HEX}`;
+    },
     inputProps: (value) => ({
-      placeholder: "FFFFFF or #FFFFFF",
+      placeholder: "#FFFFFF",
       type: "text",
       name: "HEX",
       maxLength: 7,
@@ -57,6 +63,7 @@ export const colorCodeFieldsConfig: ColorCodeFieldsConfig = [
         const RGB = { ...value.RGB, [name]: fieldValue };
         return { ...value, RGB };
       },
+    valueFormatter: ({ RGB }) => `rgb(${RGB.r}, ${RGB.g}, ${RGB.b})`,
     inputProps: (value) => [
       {
         placeholder: "0 - 255",
@@ -100,6 +107,7 @@ export const colorCodeFieldsConfig: ColorCodeFieldsConfig = [
         const HSL = { ...value.HSL, [name]: fieldValue };
         return { ...value, HSL };
       },
+    valueFormatter: ({ HSL }) => `hsl(${HSL.h}, ${HSL.s}, ${HSL.l})`,
     inputProps: (value) => [
       {
         placeholder: "0 - 360",

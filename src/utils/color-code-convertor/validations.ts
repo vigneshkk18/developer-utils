@@ -7,20 +7,11 @@ type ValidationFnMap = {
 };
 
 const regex = {
-  // TODO: support three character HEX
-  hexWithHash: /^#([0-9A-F]{3}){1,2}$/i,
-  hexWithoutHash: /^([0-9A-F]{3}){1,2}$/i,
-  hexCharacterWithHash: /^#([0-9A-F]){6}/i,
-  hexCharacterWithoutHash: /^([0-9A-F]){6}/i,
+  hex: /^#([0-9a-fA-F]){6}$/i,
 };
 
 export const hexValidator = (value: ColorCodeValue["HEX"]) => {
-  const hasHash = value[0] === "#";
-  const hexRegexp = hasHash ? regex.hexWithHash : regex.hexWithoutHash;
-  const hexLenRegexp = hasHash
-    ? regex.hexCharacterWithHash
-    : regex.hexCharacterWithoutHash;
-  return hexRegexp.test(value) && hexLenRegexp.test(value);
+  return regex.hex.test(value);
 };
 
 export const hslValidator = (value: ColorCodeValue["HSL"]) => {

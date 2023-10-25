@@ -9,7 +9,7 @@ import { validations } from "../utils/color-code-convertor/validations";
 import { colorCodeFieldsConfig } from "../utils/color-code-convertor/fields-config";
 
 import { InputChangeEventHandler } from "../types/types";
-import { defaultValue } from "../types/color-code-convertor";
+import { ColorCode, defaultValue } from "../types/color-code-convertor";
 
 import "../styles/color-code-convertor.css";
 
@@ -49,13 +49,28 @@ export const ColorCodeConvertor = () => {
       setValue(updatedValue);
     }) as InputChangeEventHandler;
 
+  const copyToClipboard = (code: ColorCode) => () => {
+    const fieldConfig = colorCodeFieldsConfig.find(
+      (config) => config.key === code
+    );
+    const isSameAsInitialValue = isEqual(defaultValue[code], value[code]);
+    if (!fieldConfig || isSameAsInitialValue) return;
+    const formattedValue = fieldConfig.valueFormatter(value);
+    navigator.clipboard.writeText(formattedValue);
+  };
+
   return (
     <main className="page ccc">
       <div className="ccc_content">
         {colorCodeFieldsConfig.map((config) => {
           return (
             <div key={config.key} className="ccc_field-group">
-              <label className="ccc_field-label label">{config.label}</label>
+              <label
+                onClick={copyToClipboard(config.key)}
+                className="ccc_field-label label ccc_color-code"
+              >
+                {config.label}
+              </label>
               {config.inputType === "single" ? (
                 <input
                   {...config.inputProps(value)}
